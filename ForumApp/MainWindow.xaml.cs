@@ -24,5 +24,11 @@ namespace ForumApp
         {
             InitializeComponent();
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+           var manager = new RequestManager();
+            manager.GetForumComments(new Uri("https://catalog.api.onliner.by/search/mobile?mfr[0]=xiaomi&mfr[1]=htc&price[to]=1000.00&group=1"));
+        }
     }
 }
